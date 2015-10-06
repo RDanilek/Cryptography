@@ -23,5 +23,5 @@ while a != "q":
     else:
         print("Did not understand command, try again.")
 
-associations.find(char)
-associations[index]
+#associations.find(char)
+#associations[index]
