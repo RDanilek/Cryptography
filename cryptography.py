@@ -33,7 +33,22 @@ while a != "q":
         print("")
 
     elif a=="d":
-        print("d")
+        decrypting = input("What do you want to decrypt? ")
+        jumbler = input("What should the key be? ")
+        d_list = []
+        j_list= []
+        for x in decrypting:
+            d_list.append(associations.find(x))
+        for x in jumbler:
+            j_list.append(associations.find(x))
+        if len(d_list) > len(j_list):
+            combined_list = list(zip(d_list, cycle(j_list)))
+        else:
+            combined_list = list(zip(cycle(d_list), j_list))
+        dsum = [x - y for x, y in combined_list]
+        for x in dsum:
+            print(associations[x], end='')
+        print("")
     elif a =="q":
         print("Goodbye!")
     else:
