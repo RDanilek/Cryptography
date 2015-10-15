@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Roger Danilek
-Credit: 
+Credit: Nils
 
 Assignment:
 
@@ -15,7 +15,20 @@ a = ""
 while a != "q":
     a = input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if a=="e":
-        print("e")
+        encrypting = input("What do you want to encrypt? ")
+        jumbler = input("What should the key be? ")
+        e_list = []
+        j_list= []
+        for x in encrypting:
+            e_list.append(associations.find(x))
+        for x in jumbler:
+            j_list.append(associations.find(x))
+        if len(e_list) > len(j_list):
+            combined_list = list(zip(e_list, cycle(j_list)))
+        else:
+            combined_list = list(zip(cycle(e_list), j_list))
+        print(combined_list)
+        
     elif a=="d":
         print("d")
     elif a =="q":
