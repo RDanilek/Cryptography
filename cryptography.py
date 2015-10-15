@@ -29,7 +29,7 @@ while a != "q":
             combined_list = list(zip(cycle(e_list), j_list))
         esum = [x + y for x, y in combined_list]
         for x in esum:
-            print(associations.[x], end='')
+            print(associations[x], end='')
 
     elif a=="d":
         print("d")
