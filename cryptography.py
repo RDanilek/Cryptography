@@ -27,8 +27,9 @@ while a != "q":
             combined_list = list(zip(e_list, cycle(j_list)))
         else:
             combined_list = list(zip(cycle(e_list), j_list))
-        print(combined_list)
-        
+        list1, list2 = zip(*combined_list)
+        print(list1)
+        print(list2)
     elif a=="d":
         print("d")
     elif a =="q":
