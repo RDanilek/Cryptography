@@ -30,6 +30,7 @@ while a != "q":
         esum = [x + y for x, y in combined_list]
         for x in esum:
             print(associations[x], end='')
+            print("")
 
     elif a=="d":
         print("d")
