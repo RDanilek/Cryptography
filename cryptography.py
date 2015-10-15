@@ -27,9 +27,8 @@ while a != "q":
             combined_list = list(zip(e_list, cycle(j_list)))
         else:
             combined_list = list(zip(cycle(e_list), j_list))
-        list1, list2 = zip(*combined_list)
-        wot = [list1, list2]
-        [(sum(a) for a in (wot))] 
+        [x + y for x, y in combined_list]
+        print([(sum(a) for a in (wot))])
         
     elif a=="d":
         print("d")
