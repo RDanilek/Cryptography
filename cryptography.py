@@ -28,7 +28,8 @@ while a != "q":
         else:
             combined_list = list(zip(cycle(e_list), j_list))
         esum = [x + y for x, y in combined_list]
-        print(esum)
+        for x in esum:
+            print(associations.[x], end='')
 
     elif a=="d":
         print("d")
