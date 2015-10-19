@@ -16,8 +16,8 @@ a = ""
 while a != "q":
     a = input("Enter e to encrypt, d to decrypt, or q to quit: ")
     if a=="e":
-        encrypting = input("What do you want to encrypt? ")
-        jumbler = input("What should the key be? ")
+        encrypting = input("Message: ")
+        jumbler = input("Key: ")
         e_list = []
         j_list= []
         for x in encrypting:
@@ -32,10 +32,11 @@ while a != "q":
         for x in esum:
             print(la[x], end='')
         print("")
+        print("")
 
     elif a=="d":
-        decrypting = input("What do you want to decrypt? ")
-        jumbler = input("What should the key be? ")
+        decrypting = input("Message: ")
+        jumbler = input("Key: ")
         d_list = []
         j_list= []
         for x in decrypting:
@@ -49,6 +50,7 @@ while a != "q":
         dsum = [x - y for x, y in combined_list]
         for x in dsum:
             print(la[x], end='')
+        print("")
         print("")
     elif a =="q":
         print("Goodbye!")
