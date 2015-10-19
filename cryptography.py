@@ -10,7 +10,8 @@ Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
-la = list(associations)
+la = 1000*associations
+print(la)
 from itertools import cycle 
 a = ""
 while a != "q":
@@ -30,7 +31,7 @@ while a != "q":
             combined_list = list(zip(cycle(e_list), j_list))
         esum = [x + y for x, y in combined_list]
         for x in esum:
-            print(associations[x], end='')
+            print(la[x], end='')
         print("")
 
     elif a=="d":
@@ -48,7 +49,7 @@ while a != "q":
             combined_list = list(zip(cycle(d_list), j_list))
         dsum = [x - y for x, y in combined_list]
         for x in dsum:
-            print(cycle(la[x]), end='')
+            print(la[x], end='')
         print("")
     elif a =="q":
         print("Goodbye!")
