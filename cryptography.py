@@ -11,7 +11,6 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 la = 1000*associations
-print(la)
 from itertools import cycle 
 a = ""
 while a != "q":
